@@ -27,17 +27,10 @@ export default function Home({ products }) {
 }
 
 export async function getStaticProps() {
-  let products = await fetch(
-    `${process.env.NETLIFY_URL}/.netlify/functions/get-product-list`
-  )
-    .then((res) => res.json())
-    .then((response) => {
-      return response.products.edges;
-    })
-
+  const products = await getProductList();
   return {
     props: {
       products,
     },
-  }
+  };
 }

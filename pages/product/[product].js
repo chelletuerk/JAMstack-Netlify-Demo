@@ -8,7 +8,7 @@ export default function ProductPage({ product }) {
   return (
     <div className="container">
       <Head>
-        <title>Shoperoni | Buy {product.node.title}</title>
+        <title>LifeFitness | Buy {product.node.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -35,7 +35,6 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   let products = await getProductList();
-
   let product = products.find((p) => {
     return p.node.handle === params.product;
   });
