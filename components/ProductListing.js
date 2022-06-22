@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 export default function ProductListing({ product }) {
-  let image = product.images.edges[0].node;
+  let image = product.images?.edges[0].node;
   return (
     <li className="product-card">
       <div className="product-card-frame">
