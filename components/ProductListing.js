@@ -15,7 +15,7 @@ export default function ProductListing({ product }) {
       </div>
       <Link href={`/product/${product.handle}`}>
         <a>
-          <button>Learn More {`>`} </button>
+          <button> {`Learn More >`} </button>
         </a>
       </Link>
     </li>
