@@ -10,7 +10,3 @@ export default function Search() {
         <Hits hitComponent={Hit}/>
     </InstantSearch>
  )};
-
- // products.map((p, index) => {
- //   return <ProductListing key={`product${index}`} product={p.node} />;
- // })
